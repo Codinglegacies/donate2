@@ -3,8 +3,18 @@
 
 :root{
     --themeorange: orange;
-    --black: black;
+    --grey: grey;
 
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 
 
@@ -20,6 +30,11 @@ font-family: 'Poppins', sans-serif;
     outline: none;
 }
 
+p {
+    font-size: 14px;
+    line-height: 26px;
+}
+
 .fullContainer {
     width: 100%;
     height: 100vh;
@@ -28,7 +43,36 @@ font-family: 'Poppins', sans-serif;
 
 .container{
     width: 1140px;
-    margin: 0 auto;
+    margin: auto;
+}
+.sectionTitle{
+    width: 300px;
+    border-bottom: 3px solid var(--themeorange);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 0 auto 50px;
+    position: relative;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+.sectionTitle::after {
+    display: inline-block;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: var(--themeorange);
+    position: absolute;
+    left: calc(50% - 10px);
+    top: calc(75% - 7px);
+    transform: rotate(45deg) translate(50%, 50%);
+    border: 3px solid #fff;
+}
+
+section{
+    padding: 100px 0;
+    position: relative;
 }
 /*common style start*/
 
@@ -89,12 +133,170 @@ header nav ul li a:hover{
 .banner{
     min-height: 100vh;
     width: 100%;
-    background-image: url("C:\Users\USER\OneDrive\Desktop\images\banner.jpeg");
+    background-image: url("c:\Users\tob\OneDrive\Desktop\visual code start\images\ashley (1).jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
 }
+ .banner h1{
+    margin-top: 230px;
+    display: inline-block;
+    font-size: 3.5rem;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+    width: 50%;
+    line-height: 4.2rem;
+    font-weight: 100;
+ }
+  .banner h1 span{
+    background-color: var(--themeorange);
+    display: inline-block;
+    line-height: 3.5rem;
+    padding:0.13px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.banners p {
+    color: #fff;
+    width: 50%;
+    text-shadow: 0 0 2px #000;
+    margin-top: 10px;
+}
 
-/*home style end*/
+.banner button {
+    background-color: var(--themeorange);
+    border: 0;
+    outline: none;
+    color: #fff;
+    padding: 10px 15px;
+    margin-top: 20px;
+    font-size: 13px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+/*home style ends here */
+
+/* aboutSection starts here */
+
+#aboutSection .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    position: relative;
+    flex-direction: column-reverse;
+    height: 200px;
+}
+
+#aboutSection .cards > div {
+
+    width: 350px;
+    background-color: var(--grey);
+    padding: 35px;
+    color: #444;
+    text-align: center;
+    border-radius: 5px;
+    height: 250px;
+    border: 1px solid #ccc;
+    transition: 0.5s;
+}
+
+#aboutSection .cards > div:hover{
+    width: 400px;
+    margin-top: -20px;
+    border-color: var(--themeorange);
+    padding: 55px;
+    height: 250px;
+}
+
+
+
+#aboutSection .cards > div .title {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+
+#aboutSection .cards > div p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+#aboutSection .cards > div button {
+    border: 1px solid var(--themeorange);
+    outline: none;
+    padding: 7px 15px;
+    margin-top: 5px;
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#aboutSection .cards >:hover button {
+    background-color: var(--themeorange);
+    color: #fff;
+}
+
+/* aboutSection ends here */
+
+/* programsSection starts here */
+
+.programs {
+    background-color: #e2e2e2;
+    
+}
+
+.programs .boxContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+}
+
+.programs .boxContainer .box {
+    background-color: #fff;
+    text-align: center;
+    padding-bottom: 25px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0 #c5c5c5;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+
+.programs .boxContainer .box .cardImage {
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+
+}
+
+
+.programs .boxContainer .box .cardImage:after {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+
+.programs .boxContainer .box:nth-child(1) .cardImage,
+.programs .boxContainer .box:nth-child(1) .cardImage:after{
+    background-image: url('../images/programs/1.jpeg');
+
+}
+
+/* programsSection ends here */
